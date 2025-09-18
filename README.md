@@ -236,6 +236,7 @@ erDiagram
 - ブンデスリーガ（ドイツ）
 - UEFA Champions League
 - FIFA World Cup
+- etc
 
 ---
 
