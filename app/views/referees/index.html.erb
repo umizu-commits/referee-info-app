@@ -1,0 +1,22 @@
+<h1>審判一覧</h1>
+
+<table class="table table-striped table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th>ID</th>
+      <th>名前</th>
+      <th>所属</th>
+      <th>詳細ページ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @referees.each do |referee| %>
+      <tr>
+        <td><%= referee.id %></td>
+        <td><%= referee.name %></td>
+        <td><%= referee.organization %></td>
+        <td><%= link_to "詳細", referee_path(referee), class: "btn btn-primary btn-sm" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  # すでに不要なので以下を削除
+  # get 'referees/index'
+  # get 'referees/show
   get 'home/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -8,6 +11,9 @@ Rails.application.routes.draw do
 
   # ⚽ サッカー審判情報システムのルート設定
   root 'home#index'
+
+  # 現状はindex/showのみ必要なので限定的にresourcesを追加
+  resources :referees, only: [:index, :show, :new, :create]
   
   # 将来的な審判員関連ルート（コメントアウト）
   # resources :referees do
